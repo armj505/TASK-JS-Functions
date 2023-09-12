@@ -22,13 +22,14 @@ greet("Hamza");
  * isOdd(10) -> false
  */
 function isOdd(n) {
-  // Your code here
-  if (n % 2 === 1) {
-    return true;
-  } else {
-    return false;
-  }
+  // // Your code here
+  // if (n % 2 === 1) {
+  //   return true;
+  // }
+  // return false;
+  return n % 2;
 }
+
 isOdd(7);
 isOdd(10);
 
@@ -43,14 +44,17 @@ isOdd(10);
  */
 function oddsSmallerThan(n) {
   // Your code here
-  let oddTotal = 0;
-  for (let i = 0; i < n; i++) {
-    if (i % 2 === 1) {
-      oddTotal += 1;
-    }
-  }
-  console.log(oddTotal);
+  //   let oddTotal = 0;
+  //   for (let i = 0; i < n; i++) {
+  //     if (i % 2 === 1) {
+  //       oddTotal += 1;
+  //     }
+  //   }
+  //   console.log(oddTotal);
+  //
+  console.log(parseInt(n / 2));
 }
+
 oddsSmallerThan(7);
 oddsSmallerThan(15);
 oddsSmallerThan(50);
@@ -67,13 +71,18 @@ oddsSmallerThan(50);
  */
 function squareOrDouble(n) {
   // Your code here
-  result = 0;
-  if (n % 2 === 0) {
-    result = n * 2;
+  // result = 0;
+  // if (n % 2 === 0) {
+  //   result = n * 2;
+  // } else {
+  //   result = n ** 2;
+  // }
+  // console.log(result);
+  if (isOdd(n)) {
+    console.log(n ** 2);
   } else {
-    result = n ** 2;
+    console.log(n * 2);
   }
-  console.log(result);
 }
 squareOrDouble(16);
 squareOrDouble(9);
